@@ -1,5 +1,6 @@
 package todo.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -19,8 +20,11 @@ public class Todo {
 
 	private String task;
 
-	private Date date;
+	private LocalDate date;
 
 	private boolean isDone;
 
 }
+
+
+

@@ -1,0 +1,1 @@
+INSERT INTO todo (task,date,is_done) VALUES ('sleep','2020-06-01',false)
