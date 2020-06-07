@@ -6,6 +6,7 @@
       <th scope="col">Description</th>
       <th scope="col">Date</th>
       <th scope="col">Done</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -15,7 +16,42 @@
       <td>{{todo.description}}</td>
       <td>{{todo.date}}</td>
       <td>{{todo.done}}</td>
+      <td><button type="button" class="btn btn-danger" (click)="delete(todo.id)" onClick="window.location.reload();">Delete</button></td>
     </tr>
 
   </tbody>
 </table>
+
+
+
+<button (click)="showAddTodo()">Add Todo</button>
+<div *ngIf="show">
+<form [formGroup]="todoForm" (ngSubmit)="handelSubmit()">
+
+  <label>
+    Task
+    <input type="text" formControlName="task">
+  </label>
+  <br>
+
+  <label>
+    Description
+    <input type="text" formControlName="description">
+  </label>
+  <br>
+
+  <label>
+    Date
+    <input type="date" formControlName="date">
+  </label>
+  <br>
+
+  <label>
+    Done
+    <input type="checkbox" formControlName="done">
+  </label>
+  <br>
+
+  <input type="submit" value="Add This Todo">
+</form>
+</div>
