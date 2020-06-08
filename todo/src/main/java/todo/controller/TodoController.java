@@ -73,5 +73,19 @@ public class TodoController {
 	}
 	
 	
+	@GetMapping("/findbyid/{id}")
+	public ResponseEntity<?> findById(@PathVariable Integer id){
+		
+		if(this.todoRepository.findById(id).isPresent()) {
+			
+			return new ResponseEntity<>(this.todoRepository.findById(id),HttpStatus.OK);
+		}else {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+		}
+	}
+	
+	
+	
 
 }

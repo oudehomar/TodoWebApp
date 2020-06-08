@@ -26,8 +26,14 @@ export class HttpService {
 
   public delete(id: number) {
     return this.http.delete<Todo>(this.url + 'delete/' + id);
-
   }
 
+  public findById(id: number) {
+    return this.http.get<Todo>(this.url + 'findbyid/' + id);
+  }
+
+  public update(id: number, todo: Todo) {
+    return this.http.put<Todo>(this.url + 'update/' + id, todo);
+  }
 
 }

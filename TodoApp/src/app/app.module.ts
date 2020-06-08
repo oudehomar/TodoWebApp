@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowAllComponent } from './components/show-all/show-all.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdateComponent } from './components/update/update.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowAllComponent
+    ShowAllComponent,
+    UpdateComponent
     ],
   imports: [
     BrowserModule,

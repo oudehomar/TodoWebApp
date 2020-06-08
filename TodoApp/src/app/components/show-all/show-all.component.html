@@ -6,6 +6,7 @@
       <th scope="col">Description</th>
       <th scope="col">Date</th>
       <th scope="col">Done</th>
+      <th scope="col">Update</th>
       <th scope="col">Delete</th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <td>{{todo.description}}</td>
       <td>{{todo.date}}</td>
       <td>{{todo.done}}</td>
+      <td><button type="button" class="btn btn-warning" [routerLink]="['/todo/update',todo.id]">Update</button></td>
       <td><button type="button" class="btn btn-danger" (click)="delete(todo.id)" onClick="window.location.reload();">Delete</button></td>
     </tr>
 
@@ -24,7 +26,7 @@
 
 
 
-<button (click)="showAddTodo()">Add Todo</button>
+<button type="button" class="btn btn-primary" (click)="showAddTodo()">Add Todo</button>
 <div *ngIf="show">
 <form [formGroup]="todoForm" (ngSubmit)="handelSubmit()">
 

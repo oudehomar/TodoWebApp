@@ -14,9 +14,8 @@ export class ShowAllComponent implements OnInit {
   todoForm: FormGroup;
   show = false;
 
+
   constructor(private httpService: HttpService, private fb: FormBuilder) { }
-
-
 
   ngOnInit(): void {
 
@@ -43,8 +42,6 @@ export class ShowAllComponent implements OnInit {
   delete(id: number) {
     this.httpService.delete(id).subscribe();
     this.ngOnInit();
-
   }
-
 
 }
