@@ -33,6 +33,7 @@ export class ShowAllComponent implements OnInit {
   handelSubmit() {
     this.httpService.addTodo(this.todoForm.value).subscribe();
     this.ngOnInit();
+    window.location.reload();
   }
 
   showAddTodo() {

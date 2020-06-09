@@ -26,9 +26,10 @@
 
 
 
-<button type="button" class="btn btn-primary" (click)="showAddTodo()">Add Todo</button>
+<button type="button" class="btn btn-primary" (click)="showAddTodo()" >Add Todo</button>
+<br><br>
 <div *ngIf="show">
-<form [formGroup]="todoForm" (ngSubmit)="handelSubmit()">
+<form [formGroup]="todoForm" (ngSubmit)="handelSubmit()" onClick="window.location.reload();">
 
   <label>
     Task
